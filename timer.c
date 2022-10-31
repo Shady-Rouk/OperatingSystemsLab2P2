@@ -13,6 +13,7 @@ time_t start, end;
 
 void handler_alarm(int signum) { // alarm signal handler
   printf("Hello World!\n");
+	num_alarms += 1;
 	keep_going = false;
 }
 
@@ -35,7 +36,6 @@ int main(int argc, char * argv[])
 		while (keep_going);
 		printf("Turing was right!\n");
 		keep_going = true;
-		num_alarms += 1;
 	}
 	
   return 0;
