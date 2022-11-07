@@ -32,7 +32,6 @@ int main(int argc, char * argv[])
 	signal(SIGINT,handler_interrupt);
 	while (true) {
 		alarm(1); //Schedule a SIGALRM for 1 second
-		pause();
 		while (keep_going);
 		printf("Turing was right!\n");
 		keep_going = true;

@@ -18,7 +18,6 @@ int main(int argc, char * argv[])
   signal(SIGALRM,handler); //register handler to handle SIGALRM
 	while (true) {
 		alarm(1); //Schedule a SIGALRM for 1 second
-		pause();
 		while(keep_going); //busy wait for signal to be delivered
 		printf("Turing was right!\n");
 		keep_going = true;
